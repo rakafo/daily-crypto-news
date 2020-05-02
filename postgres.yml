@@ -1,0 +1,38 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars:
+    user1: daily_user
+    pass1: daily_pass
+  tasks:
+  
+  - name: create new user
+    postgresql_user:
+      name: "{{ user1 }}"
+      password: "{{ pass1 }}"
+      state: present
+
+
+  - name: drop DB if exists
+    postgresql_db:
+      name: daily
+      owner: "{{ user1 }}"
+      state: absent
+      
+  - name: create DB
+    postgresql_db:
+      name: daily
+      owner: "{{ user1 }}"
+      state: present
+  
+  - name: create table reddit
+    postgresql_table:
+      db: daily
+      table: reddit
+      owner: "{{ user1 }}"
+      columns:
+        - id serial primary key
+        - subreddit text
+        - created date
+        - title text
+        - url text

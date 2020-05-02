@@ -1,0 +1,41 @@
+---
+subreddits:
+  - Bitcoin
+  - BitcoinMarkets
+  - Ethereum
+  - omise_go
+  - Chainlink
+  - LINKTrader
+  - waltonchain
+  - iexec
+  - enigmacatalyst
+  - Cindicator
+  - RequestNetwork
+  - InvictusCapital
+  - Vechain
+  
+cmc:
+  - BTC
+  - ETH
+  - OMG
+  - LINK
+  - WTC
+  - RLC
+  - ENG
+  - CND
+  - REQ
+  - IHF
+  - VET
+  
+calendar:
+  - bitcoin
+  - ethereum
+  - omisego
+  - chainlink
+  - waltonchain
+  - rlc
+  - enigma
+  - cindicator
+  - request
+  - invictus-hyperion-fund
+  - vechain
